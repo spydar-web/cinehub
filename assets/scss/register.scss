@@ -1,0 +1,16 @@
+$primary-btn: #6dbfb8;
+$fonts: 'Poppins', sans-serif;
+$spacing : 2rem;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fonts;
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
