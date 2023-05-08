@@ -1,24 +1,28 @@
 {
-  "name": "cinehub",
-  "version": "1.0.0",
-  "description": "Movie app",
-  "main": "index.js",
-  "scripts": {
-    "test": "npm run test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/spydar-web/cinehub.git"
-  },
-  "keywords": [
-    "JavaScript",
-    "TypeScript",
-    "Vite"
-  ],
-  "author": "cinehub",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/spydar-web/cinehub/issues"
-  },
-  "homepage": "https://github.com/spydar-web/cinehub#readme"
+    "name": "cinehub",
+    "version": "1.0.0",
+    "description": "Movie app",
+    "main": "index.js",
+    "scripts": {
+        "test": "npm run test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/spydar-web/cinehub.git"
+    },
+    "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "Vite"
+    ],
+    "author": "cinehub",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/spydar-web/cinehub/issues"
+    },
+    "homepage": "https://github.com/spydar-web/cinehub#readme",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "firebase": "^9.21.0"
+    }
 }
