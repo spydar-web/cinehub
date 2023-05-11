@@ -7,14 +7,25 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const passwordConfirm = document.getElementById("passwordConfirm");
 
-const register = () => {
+const form = document.querySelector("#registerForm");
+
+form.addEventListener("submit", async (e) => {
+    console.log("====================================");
+    e.preventDefault();
+    await register();
+});
+
+const register = async () => {
+    // e.preventDefault();
     try {
         if (password.value !== passwordConfirm.value) {
             alert("Passwords do not match");
             return;
         }
 
-        const res = createUserWithEmailAndPassword(
+        console.table(username.value, email.value, password.value);
+        return;
+        const res = await createUserWithEmailAndPassword(
             auth,
             email.value,
             password.value
