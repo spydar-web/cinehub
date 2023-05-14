@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/assets/Images/favicon.png.jpg" type="image/x-icon\">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40sADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/scss/input.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src=" /Assets/js/index.js" defer></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#FF0000',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>FlixNet</title>
+</head>
+
+<body>
+    <header class="bg-[rgb(255,0,0)] max-w-full">
+        <nav class=" p-4 mx-auto">
+            <div class="flex  justify-between">
+                <div class="flex space-x-8 items-center">
+
+                    <div class="block md:hidden hamburger-menu">
+                        <div>
+                            <input id="menu__toggle" type="checkbox" />
+                            <label class="menu__btn" for="menu__toggle">
+                                <span></span>
+                            </label>
+                            <ul class="menu__box">
+                                <li class="active"><a class="menu__item" href="#">HOME</a></li>
+                                <li><a class="menu__item" href="#">TV SHOWS</a></li>
+                                <li><a class="menu__item" href="#">WEB SHOWS</a></li>
+                                <li><a class="menu__item" href="#">MOVIES</a></li>
+                                <li><a class="menu__item" href="#">CHANNELS</a></li>
+                                <li><a class="menu__item" href="#">MUSIC</a></li>
+                                <li><a class="menu__item" href="#">BUZZ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- website logo -->
+                    <div class="flex space-x-2 hidden md:flex">
+                        <img class="w-[35px]" src="/Assets/images/play-button.png" alt="" />
+                        <h1 class="text-[#fff] font-semibold text-2xl"><a href="#">FLIX-NET</a></h1>
+                    </div>
+                    <div class="text-[#fff] hidden md:flex">
+                        <ul class="flex space-x-6 topnav">
+                            <li class=""><a href="#home" class="m  ">HOME</a></li>
+                            <li
+                                class="group relative dropdown text-[#fff] hover:text-[#ffdede] cursor-pointer whitespace-nowrap">
+                                <a href="#">TV SHOWS</a>
+                                <div class="group-hover:block  dropdown-menu absolute hidden h-auto top-[2rem]">
+                                    <ul class="top-0 w-36 bg-[#fff] shadow px-6 py-8">
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">REALITY</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">COMEDY</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">DRAMA</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">CRIME</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">THRILLER</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li
+                                class="group relative dropdown text-[#fff] hover:text-[#ffdede] cursor-pointer whitespace-nowrap">
+                                <a href="#">WEB SHOWS</a>
+                                <div class="group-hover:block  dropdown-menu absolute hidden h-auto top-[2rem]">
+                                    <ul class="top-0 w-36 bg-[#fff] shadow px-6 py-8">
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:bg-[#00000040] cursor-pointer">DRAMA</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">REALITY</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">CRIME</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">COMEDY</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">THRILLER</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="group relative dropdown text-[#fff] hover:text-[#ffdede] cursor-pointer"><a
+                                    href="#">MOVIES</a>
+                                <div class="group-hover:block  dropdown-menu absolute hidden h-auto top-[2rem]">
+                                    <ul class="top-0 w-36 bg-[#fff] shadow px-6 py-8">
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">ENGLISH</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">TAMIL</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">HINDI</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">ARABIC</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">RUSSIAN</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">CHANNELS</a></li>
+                            <li class="group relative dropdown text-[#fff] hover:text-[#ffdede] cursor-pointer"><a
+                                    href="#">MUSIC</a>
+                                <div class="group-hover:block  dropdown-menu absolute hidden h-auto top-[2rem]">
+                                    <ul class="top-0 w-36 bg-[#fff] shadow px-6 py-8">
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">ENGLISH</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">TAMIL</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">HINDI</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">ARABIC</a>
+                                        </li>
+                                        <li class="py-1"><a href="#"
+                                                class="block text-[black] font-bold text-base uppercase hover:text-purple-700 cursor-pointer">RUSSIAN</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">BUZZ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="flex items-center space-x-6 font-medium">
+
+                        <button onclick="document.getElementById('Search-modal').style.display='block'">
+                            <img class="w-[26px]" src="/Assets/images/search.png" alt="search" />
+                        </button>
+
+
+                        <div class="flex cursor-pointer">
+                            <button onclick="document.getElementById('list').style.display='block'">
+                                <img class="w-[26px]" src="/Assets/images/plus.png" alt="add" /></button>
+                            <h2 onclick="document.getElementById('list').style.display='block'">MY LIST</h2>
+                        </div>
+
+                        <div class="flex cursor-pointer">
+                            <button>
+                                <img class="w-[17px] h-[20px]" src="/Assets/images/power.png" alt="logout" />
+                            </button>
+                            <h2>LOGOUT</h2>
+                        </div>
+
+                        <button onclick="document.getElementById('setting-modal').style.display='block'"><img
+                                class="w-[23px]" src="/Assets/images/setting.png" alt="setting" />
+                        </button>
+                        <!-- onClick setting -->
+                        <div class="modal">
+                            <div class="space-y-5 cursor-pointer hidden p-5 bg-[#fff] shadow-2xl text-[black] w-[20rem] h-[40rem]"
+                                id="setting-modal">
+                                <div class="flex space-x-10 items-center">
+                                    <h1 class="text-[1.3rem]">Theme Customizer</h1>
+                                    <span class="text-[35px] font-extralight"
+                                        onclick="document.getElementById('setting-modal').style.display='none'"
+                                        class="close" title="Close Modal">&times;</span>
+                                </div>
+                                <hr>
+
+                                <h2 class="text-[17px]">Theme Variation</h2>
+                                <hr>
+
+                                <div class="flex space-x-2">
+                                    <input type="radio" id="light">
+                                    <label for="html">Light</label><br>
+                                    <input type="radio" id="dark">
+                                    <label for="css">Dark</label><br>
+                                </div>
+                                <hr>
+                                <!-- 
+                                <h2>Theme Colors</h2> -->
+                                <hr>
+                                <div class="flex space-x-4">
+                                    <div class="w-[44px] h-[49px] rounded-[10px] bg-[#6610f2]"></div>
+                                    <div class="w-[44px] h-[49px] rounded-[10px] bg-[#9c27b0]"></div>
+                                    <div class="w-[44px] h-[49px] rounded-[10px] bg-[#09a257]"></div>
+                                    <div class="w-[44px] h-[49px] rounded-[10px] bg-[#9d3939]"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img class="w-[3401px]" src="/Assets/images/01.png" alt=""></div>
+            <div class="swiper-slide"><img class="w-[3401px]" src="/Assets/images/02.png" alt=""></div>
+            <div class="swiper-slide"><img class="w-[3401px]" src="/Assets/images/03.png" alt=""></div>
+            <div class="swiper-slide"><img class="w-[3401px]" src="/Assets/images/04.png" alt=""></div>
+            <div class="swiper-slide"><img class="w-[3401px]" src="/Assets/images/05.png" alt=""></div>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!-- carosuel section -->
+
+    <section class="space-y-[40px] mt-[50px] p-4">
+        <div class=" flex justify-between text-center px-20">
+            <h1 class="text-2xl ">Trending In Movies</h1>
+            <button class=" font-bold bg-clifford text-white p-[10px]">
+                MORE VIDEOS
+            </button>
+        </div>
+
+        <div class="px-20">
+            <div class="flex gap-6 w-[170px]">
+                <img src="/assets/Images/two.png" alt="">
+                <img src="/assets/Images/seven.png" alt="">
+                <img src="/assets/Images/three.png" alt="">
+                <img src="/assets/Images/five.png" alt="">
+                <img src="/assets/Images/four.png" alt="">
+                <img src="/assets/Images/eight.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="space-y-[40px] mt-[50px] p-4">
+        <div class=" flex justify-between text-center px-20">
+            <h1 class="text-2xl ">Popular Web Shows</h1>
+            <button class=" font-bold bg-clifford text-white p-[10px]">
+                MORE VIDEOS
+            </button>
+        </div>
+
+        <div class="px-20">
+            <div class="flex gap-6 w-[170px]">
+                <img src="/assets/Images/two.png" alt="">
+                <img src="/assets/Images/seven.png" alt="">
+                <img src="/assets/Images/three.png" alt="">
+                <img src="/assets/Images/five.png" alt="">
+                <img src="/assets/Images/four.png" alt="">
+                <img src="/assets/Images/eight.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="space-y-[40px] mt-[50px] p-4">
+        <div class=" flex justify-between text-center px-20">
+            <h1 class="text-2xl ">Trending In Movies</h1>
+            <button class=" font-bold bg-clifford text-white p-[10px]">
+                MORE VIDEOS
+            </button>
+        </div>
+
+        <div class="px-20">
+            <div class="flex gap-6 w-[170px]">
+                <img src="/assets/Images/two.png" alt="">
+                <img src="/assets/Images/seven.png" alt="">
+                <img src="/assets/Images/three.png" alt="">
+                <img src="/assets/Images/five.png" alt="">
+                <img src="/assets/Images/four.png" alt="">
+                <img src="/assets/Images/eight.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="space-y-[40px] mt-[50px] p-4">
+        <div class=" flex justify-between text-center px-20">
+            <h1 class="text-2xl ">Trending In Movies</h1>
+            <button class=" font-bold bg-clifford text-white p-[10px]">
+                MORE VIDEOS
+            </button>
+        </div>
+
+        <div class="px-20">
+            <div class="flex gap-6 w-[170px]">
+                <img src="/assets/Images/two.png" alt="">
+                <img src="/assets/Images/seven.png" alt="">
+                <img src="/assets/Images/three.png" alt="">
+                <img src="/assets/Images/five.png" alt="">
+                <img src="/assets/Images/four.png" alt="">
+                <img src="/assets/Images/eight.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 500,
+            autoplay: {
+                delay: 5000,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+
+</html>
