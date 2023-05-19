@@ -1,19 +1,18 @@
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { createNewUser } from "../config";
+import dotenv from "dotenv";
+dotenv.config();
 
-const auth = getAuth(); //
-
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const passwordConfirm = document.getElementById("passwordConfirm");
-
-const form = document.querySelector("#registerForm");
-
+const form = document.getElementById("registerForm");
 form.addEventListener("submit", async (e) => {
     console.log("====================================");
     e.preventDefault();
     await register();
 });
+
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const passwordConfirm = document.getElementById("passwordConfirm");
 
 const register = async () => {
     // e.preventDefault();
@@ -23,13 +22,14 @@ const register = async () => {
             return;
         }
 
-        console.table(username.value, email.value, password.value);
-        return;
-        const res = await createUserWithEmailAndPassword(
-            auth,
+        console.table(
+            username.value,
             email.value,
-            password.value
+            password.value,
+            process.env.API_KEY
         );
+        return;
+        const res = await createNewUser(email.value, password.value);
 
         console.log("====================================");
         console.log(res);

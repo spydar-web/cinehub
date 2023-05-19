@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "../modules/firebase-app";
+import { getAnalytics } from "../modules/firebase-analytics";
 
 dotenv.config();
 
